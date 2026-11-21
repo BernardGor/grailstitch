@@ -11,7 +11,7 @@ button{font:inherit;color:inherit;background:none;padding:0;cursor:pointer}
 body{font-family:"Hanken Grotesk",system-ui,sans-serif}
 .antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .font-sans{font-family:"Hanken Grotesk",system-ui,sans-serif}
-.font-serif{font-family:"Instrument Serif",Georgia,serif}
+.font-serif{font-family:Fraunces,Georgia,serif}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
 .block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}
 .flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}
@@ -47,21 +47,20 @@ body{font-family:"Hanken Grotesk",system-ui,sans-serif}
 @media (min-width:1024px){.lg\:flex{display:flex}.lg\:grid-cols-\[1fr_300px\]{grid-template-columns:1fr 300px}.lg\:sticky{position:sticky}.lg\:top-24{top:6rem}}
 
 /* Site components */
-.font-serif{font-weight:400!important;letter-spacing:-.01em}
-h1.font-serif{font-size:clamp(2.6rem,6vw,4.25rem)!important;line-height:1.05!important}
-h2.font-serif.text-2xl,h3.font-serif.text-xl{font-size:1.9rem;line-height:1.1}
-h2.font-serif.text-3xl{font-size:2.6rem;line-height:1.05}
-a[aria-label="GrailStitch home"]{font-size:2rem!important;line-height:1;padding-bottom:2px;border-bottom:2px dashed var(--accent)}
+.font-serif{font-weight:500!important}
+h1.font-serif{font-size:clamp(2.1rem,5vw,3.25rem)!important;line-height:1.12!important}
+h2.font-serif.text-3xl{font-size:2rem;line-height:1.15}
+a[aria-label="GrailStitch home"]{font-size:1.6rem!important;line-height:1;padding-bottom:2px;border-bottom:2px dashed var(--accent)}
 .hero{background:#14161a;color:#f2efe8}
 .hero p{color:#c9c6bf}
-.hero h1.font-serif{font-size:clamp(3.2rem,8vw,6rem)!important;line-height:.98!important;letter-spacing:-.025em}
+.hero h1.font-serif{font-size:clamp(2.6rem,6.5vw,4.5rem)!important;line-height:1.05!important;letter-spacing:-.015em}
 .btn-hero{display:inline-block;background:#e59aa3;color:#14161a;font-weight:600;padding:.85rem 1.5rem}
 .btn-hero:hover{filter:brightness(1.08)}
 .hero a:focus-visible{outline-color:#e59aa3}
 .stitch-frame{border:2px dashed #e59aa3;padding:12px}
 .tile{display:block;padding:1.1rem 1.25rem;border:1px solid var(--line);background:var(--surface);transition:border-color .2s}
 .tile:hover{border-color:var(--accent)}
-.tile-n{display:block;font-family:"Instrument Serif",Georgia,serif;font-size:2.6rem;line-height:1;color:var(--accent)}
+.tile-n{display:block;font-family:Fraunces,Georgia,serif;font-size:2rem;line-height:1;color:var(--accent)}
 .tile-d{display:block;margin-top:.4rem;font-size:.9rem;color:var(--muted)}
 
 /* Mobile */
@@ -73,13 +72,33 @@ header.sticky nav ul{justify-content:flex-start;gap:1.5rem}
 a[aria-label="GrailStitch home"]{font-size:1.6rem!important}
 .ad[style*="728px"]{height:100px!important}
 .ad[style*="336px"]{height:250px!important}
-h2.font-serif.text-3xl{font-size:2.1rem}
+h2.font-serif.text-3xl{font-size:1.7rem}
 }
 
 /* Long-form text pages */
 .prose-gs p,.prose-gs li{font-size:1.125rem;line-height:1.75}
 .prose-gs p{margin:0 0 1.25rem}
-.prose-gs h2{font-family:"Instrument Serif",Georgia,serif;font-size:2.1rem;font-weight:400;line-height:1.15;margin:2.25rem 0 .9rem}
+.prose-gs h2{font-family:Fraunces,Georgia,serif;font-size:1.65rem;font-weight:500;line-height:1.25;margin:2.25rem 0 .9rem}
 .prose-gs ul{margin:0 0 1.25rem 1.25rem;list-style:disc}
-.prose-gs a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.prose-gs a:not(.btn):not(.pick-cta){color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 .callout{border-inline-start:4px solid var(--accent)}
+
+/* Anchor links: keep headings clear of the sticky header */
+html{scroll-padding-top:5.5rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* Product callout (CTA card) */
+.pick{display:grid;grid-template-columns:210px 1fr;margin:2.5rem 0;border:1px solid var(--line);background:var(--surface);box-shadow:0 14px 34px -22px rgba(0,0,0,.45);overflow:hidden}
+.pick-media{position:relative;min-height:220px;background:var(--line)}
+.pick-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pick-media svg{position:absolute;inset:0;margin:auto;width:56px;height:56px;color:var(--muted)}
+.pick-badge{position:absolute;top:.75rem;left:.75rem;background:var(--accent);color:var(--accent-ink);font-size:.75rem;font-weight:700;padding:.3rem .65rem}
+.pick-body{padding:1.5rem 1.6rem}
+.pick .pick-kicker{margin:0 0 .35rem;font-size:.85rem;line-height:1.2;font-weight:600;color:var(--accent)}
+.pick .pick-title{margin:0 0 .6rem;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:1.45rem;line-height:1.25}
+.pick .pick-desc{margin:0 0 1.2rem;font-size:1rem;line-height:1.6;color:var(--muted)}
+.pick .pick-note{margin:.7rem 0 0;font-size:.8rem;line-height:1.4;color:var(--muted)}
+.pick-cta{display:inline-flex;align-items:center;gap:.6rem;background:var(--accent);color:var(--accent-ink)!important;font-weight:700;font-size:1rem;padding:.9rem 1.5rem;text-decoration:none!important;transition:transform .15s,box-shadow .15s}
+.pick-cta:hover{transform:translateY(-2px);box-shadow:0 10px 20px -10px rgba(0,0,0,.55)}
+.pick-cta svg{transition:transform .15s}.pick-cta:hover svg{transform:translateX(3px)}
+@media (max-width:640px){.pick{grid-template-columns:1fr}.pick-media{min-height:200px}.pick-cta{display:flex;justify-content:center;width:100%}}
