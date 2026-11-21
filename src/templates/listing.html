@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{heading}} | GrailStitch</title>
+<meta name="description" content="{{intro}}">
+<link rel="canonical" href="{{url}}">
+<meta name="theme-color" content="#f3f2ef">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GrailStitch">
+<meta property="og:title" content="{{heading}} | GrailStitch">
+<meta property="og:description" content="{{intro}}">
+<meta property="og:url" content="{{url}}">
+{{> assets}}</head>
+<body class="font-sans antialiased">
+{{> header}}
+<main id="main" class="max-w-6xl mx-auto px-4 py-10">
+  <h1 class="font-serif">{{heading}}</h1>
+  <p class="muted mt-3 mb-8 max-w-prose text-lg">{{intro}}</p>
+  <div class="grid sm:grid-cols-2 gap-6">{{cards}}</div>
+</main>
+{{> footer}}
+</body>
+</html>

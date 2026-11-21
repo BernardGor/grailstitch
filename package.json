@@ -1,0 +1,7 @@
+{
+  "name": "grailstitch",
+  "private": true,
+  "scripts": { "build": "node build.js", "serve": "npx serve dist" },
+  "dependencies": { "marked": "18.0.10" },
+  "engines": { "node": ">=20" }
+}

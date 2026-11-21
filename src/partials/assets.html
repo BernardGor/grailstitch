@@ -1,0 +1,28 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+try{var t=localStorage.getItem('gs-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');}catch(e){}
+</script>
+<link rel="stylesheet" href="/utilities.css">
+<style>
+:root{--bg:#f3f2ef;--surface:#fff;--ink:#16181d;--muted:#4b4f58;--line:#d5d2ca;--accent:#8c1c2b;--accent-ink:#fff}
+.dark{--bg:#0f1114;--surface:#181b20;--ink:#ecebe7;--muted:#b4b6bc;--line:#2e323a;--accent:#e59aa3;--accent-ink:#0f1114}
+body{background:var(--bg);color:var(--ink);transition:background-color .25s,color .25s}
+.surface{background:var(--surface);border:1px solid var(--line)}
+.muted{color:var(--muted)}.accent{color:var(--accent)}
+.btn{background:var(--accent);color:var(--accent-ink);font-weight:600;padding:.7rem 1.25rem;display:inline-block}
+.btn:hover{filter:brightness(1.1)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:var(--accent-ink);padding:.75rem 1rem;z-index:100}
+.skip:focus{left:1rem;top:1rem}
+.ad{--s1:#d9d6cf;--s2:#e8e6e1;position:relative;margin-inline:auto;max-width:100%;border:1px solid var(--line);background:repeating-linear-gradient(135deg,var(--s1) 0 12px,var(--s2) 12px 24px);overflow:hidden}
+.dark .ad{--s1:#23272e;--s2:#1a1d22}
+.ad::after{content:"";position:absolute;inset:8px;border:1px solid var(--muted);opacity:.45}
+.ad::before{content:"";position:absolute;top:10px;right:10px;width:14px;height:14px;border-radius:50%;border:2px solid var(--muted);opacity:.7;z-index:1}
+#to-top{position:fixed;right:1rem;bottom:1rem;width:48px;height:48px;border-radius:9999px;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3);z-index:60;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+#to-top.show{opacity:1;visibility:visible}
+#to-top:hover{filter:brightness(1.1)}
+.dark .sun{display:inline}.dark .moon{display:none}.sun{display:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>

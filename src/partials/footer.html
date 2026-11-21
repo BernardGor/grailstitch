@@ -1,0 +1,37 @@
+<footer class="border-t mt-12" style="border-color:var(--line)">
+  <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6 text-sm">
+    <div>
+      <p class="font-serif text-xl font-bold">Grail<span class="accent italic">Stitch</span></p>
+      <p class="muted mt-2 max-w-sm">Reviews and guides for 1960s–2000s vintage clothing and footwear.</p>
+    </div>
+    <p class="muted" id="disclosure"><strong style="color:var(--ink)">Affiliate disclosure:</strong> GrailStitch is a participant in the eBay Partner Network. When you click links to eBay and make a purchase, we may earn a commission at no extra cost to you. This supports our independent research. We also display ads served by Google AdSense.</p>
+  </div>
+  <nav aria-label="Site information" class="max-w-6xl mx-auto px-4 pb-6 flex gap-5 text-sm" style="flex-wrap:wrap"><a class="underline underline-offset-4" href="/about.html">About</a><a class="underline underline-offset-4" href="/contact.html">Contact</a><a class="underline underline-offset-4" href="/privacy-policy.html">Privacy Policy</a><a class="underline underline-offset-4" href="/terms-of-use.html">Terms of Use</a><a class="underline underline-offset-4" href="/affiliate-disclosure.html">Affiliate Disclosure</a></nav>
+  <p class="muted text-center text-xs pb-8">© <span id="yr">2026</span> GrailStitch. All rights reserved.</p>
+</footer>
+
+<button id="to-top" type="button" aria-label="Back to top">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  var t=document.getElementById('to-top');
+  function chk(){t.classList.toggle('show',window.scrollY>400);}
+  window.addEventListener('scroll',chk,{passive:true});chk();
+  t.addEventListener('click',function(){
+    var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:rm?'auto':'smooth'});
+    var s=document.getElementById('main');if(s){s.setAttribute('tabindex','-1');s.focus({preventScroll:true});}
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('theme-toggle');
+  function sync(){var d=r.classList.contains('dark');b.setAttribute('aria-pressed',d);b.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode');}
+  b.addEventListener('click',function(){r.classList.toggle('dark');try{localStorage.setItem('gs-theme',r.classList.contains('dark')?'dark':'light');}catch(e){}sync();});
+  sync();document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
