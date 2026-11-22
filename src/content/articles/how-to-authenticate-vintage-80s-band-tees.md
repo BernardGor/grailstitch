@@ -51,7 +51,7 @@ Black t-shirts from the 1980s—especially unworn "deadstock" pieces stored in h
 - **How to Spot Dry Rot:** Deadstock black tees with dry rot often have a faint sour or vinegar-like odor and an unnatural, rigid sheen on the fabric.
 - **The Tug Test:** Before wearing or washing a vintage black tee, gently pull the fabric near the armpit or hem. Healthy vintage cotton stretches slightly; dry-rotted fabric tears silently like wet tissue paper.
 
-{{product 1980s Screen Stars Vintage Graphic Tees | Classic 50/50 poly-cotton Made in USA blanks from the 1980s. Check pit-to-pit measurements before purchasing. | 80s screen stars vintage t shirt made in usa}}
+{{product 1980s Screen Stars Vintage Graphic Tees | Classic 50/50 poly-cotton Made in USA blanks from the 1980s. Check pit-to-pit measurements before purchasing. | 80s screen stars vintage t shirt made in usa | /images/screen-stars-tee.jpg}}
 
 ## Quick Authentication Checklist
 
