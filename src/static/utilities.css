@@ -103,7 +103,7 @@ html{scroll-padding-top:5.5rem}
 .pick-cta svg{transition:transform .15s}.pick-cta:hover svg{transform:translateX(3px)}
 @media (max-width:640px){.pick{grid-template-columns:1fr}.pick-media{min-height:200px}.pick-cta{display:flex;justify-content:center;width:100%}}
 
-/* Styled Collector Reference Tables */
+/* Styled Collector Reference Tables (Desktop & Mobile) */
 article table,
 main table {
   display: table !important;
@@ -114,7 +114,6 @@ main table {
   line-height: 1.5;
   border: 1.5px solid #78716c !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  overflow: visible !important;
 }
 
 article th,
@@ -148,6 +147,63 @@ main tbody tr:hover td {
   transition: background-color 0.2s ease;
 }
 
-main tr:nth-child(even) td {
-  background-color: rgba(120, 113, 108, 0.05);
+/* Mobile Card Layout (No horizontal scroll) */
+@media (max-width: 768px) {
+  article table,
+  article thead,
+  article tbody,
+  article th,
+  article td,
+  article tr,
+  main table,
+  main thead,
+  main tbody,
+  main th,
+  main td,
+  main tr {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  article thead,
+  main thead {
+    display: none !important;
+  }
+
+  article table,
+  main table {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  article tr,
+  main tr {
+    margin-bottom: 1.25rem;
+    border: 1.5px solid #78716c !important;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  article td,
+  main td {
+    border: none !important;
+    border-bottom: 1px solid rgba(168, 162, 158, 0.4) !important;
+    padding: 0.65rem 0.9rem !important;
+    font-size: 0.92rem;
+  }
+
+  article td:first-child,
+  main td:first-child {
+    background-color: rgba(120, 113, 108, 0.18) !important;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  article td:last-child,
+  main td:last-child {
+    border-bottom: none !important;
+    font-weight: 600;
+  }
 }
