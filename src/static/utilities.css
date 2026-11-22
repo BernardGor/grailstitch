@@ -102,33 +102,37 @@ html{scroll-padding-top:5.5rem}
 .pick-cta:hover{transform:translateY(-2px);box-shadow:0 10px 20px -10px rgba(0,0,0,.55)}
 .pick-cta svg{transition:transform .15s}.pick-cta:hover svg{transform:translateX(3px)}
 @media (max-width:640px){.pick{grid-template-columns:1fr}.pick-media{min-height:200px}.pick-cta{display:flex;justify-content:center;width:100%}}
+
 /* Styled Collector Reference Tables */
-.prose table {
+article table,
+main table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse !important;
   margin: 2rem 0;
   font-size: 0.92rem;
-  border: 1.5px solid var(--border-color, #d6d3d1);
-  border-radius: 8px;
-  overflow: hidden;
+  border: 2px solid #a8a29e !important;
   display: block;
   overflow-x: auto;
 }
 
-.prose th,
-.prose td {
-  border: 1px solid var(--border-color, #d6d3d1);
-  padding: 0.75rem 1rem;
+article th,
+article td,
+main th,
+main td {
+  border: 1px solid #a8a29e !important;
+  padding: 0.75rem 1rem !important;
   text-align: left;
   vertical-align: top;
 }
 
-.prose th {
-  background-color: rgba(120, 113, 108, 0.12);
+article th,
+main th {
+  background-color: rgba(120, 113, 108, 0.15) !important;
   font-weight: 700;
   white-space: nowrap;
 }
 
-.prose tr:nth-child(even) td {
-  background-color: rgba(120, 113, 108, 0.04);
+article tr:nth-child(even) td,
+main tr:nth-child(even) td {
+  background-color: rgba(120, 113, 108, 0.05);
 }
