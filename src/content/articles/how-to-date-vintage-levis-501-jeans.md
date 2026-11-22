@@ -18,7 +18,8 @@ The fastest dating clue sits on the right rear pocket. Until **1971**, Levi’s 
 - **Pre-1971 ("Big E"):** Look for a capital **E** in *LEVI’S*. Pairs from the late 1960s through 1971 typically feature double-sided tabs (the name appears on both sides of the loop) and lack care instructions inside the waistband.
 - **1971 and Later ("Small e"):** Starting in 1971, Levi’s switched to lowercase letters (**LeVI’S**). Early 1970s "Small e" pairs still retain classic 1960s tailoring and selvedge denim, making them far more valuable than later 1980s jeans.
 
-{{product Vintage 1960s–1970s Levi’s 501 Big E Jeans | Authentic pre-1971 red-line selvedge denim. Always request clear photos of the red tab, inside pockets, and outseam stitching. | vintage levis 501 big e selvedge}}
+{{product Vintage 1960s–1970s Levi’s 501 Big E Jeans | Authentic pre-1971 red-line selvedge denim. Always request clear photos of the red tab, inside pockets, and outseam stitching. | vintage levis 501 big e selvedge | /images/levis-501-big-e.jpg}}
+
 
 ## 2. Check the Outseam for Red-Line Selvedge
 
