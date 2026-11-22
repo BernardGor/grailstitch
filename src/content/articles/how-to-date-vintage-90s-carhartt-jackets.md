@@ -1,7 +1,7 @@
 ---
 title: "How to Date Vintage 1990s Carhartt Detroit and Active Jackets: Reading J01, J97, and Union Tags"
 description: "A collector’s guide to identifying and dating 1990s Carhartt work jackets: decoding 4-digit date codes, early model numbers like 6BLJ and J01, and sandstone J97 tags."
-date: 2026-11-22
+date: 2026-11-20
 decade: 90s-y2k
 category: Outerwear
 author: GrailStitch Editorial
@@ -9,7 +9,19 @@ image: /images/90s-carhartt-hero.jpg
 imageAlt: Faded brown 1990s Carhartt Detroit work jacket with corduroy collar laid flat on a rustic wooden workbench
 ---
 
-Vintage 1990s Carhartt workwear—especially faded Detroit and Active jackets—has shifted from job-site staple to high-demand collector archive. Because Carhartt changed its model numbering system in the late 1990s and stamped exact month-and-year codes onto its care tags, learning to read the inside label lets you date a jacket down to the exact month it left the factory.
+Vintage 1990s Carhartt workwear—especially faded Detroit and Active jackets—has shifted from job-site staple to high-demand collector archive. Because Carhartt changed its model numbering system in the late 1990s and stamped exact month-and-year codes onto its care tags, learning to read the inside label lets you date a jacket down to the exact month it left the factory—and avoid the wave of modern counterfeit J97 jackets flooding resale marketplaces.
+
+## Quick Reference Matrix: 1990s–Early 2000s Carhartt Jacket Codes
+
+Use this reference table to match legacy pre-1998 codes, modernized J-series numbers, chest patch materials, and current resale values:
+
+| Model Code | Active Era | Shell Material & Lining | Chest Logo Patch | Sought-After Color Codes | Typical eBay Value (Good Fade) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **`6BLJ`** | Pre-1998 | 12-oz Firm Duck + Striped Blanket | 1.5" Woven Cloth | **BRN** (Carhartt Brown) | $220 – $450+ |
+| **`JB105`** | Pre-1998 | 12-oz Firm Duck + Striped Blanket | 1.5" Woven Cloth | **BLK** (Black) | $250 – $500+ |
+| **`J01`** | 1998 – 2010s | 12-oz Firm Duck + Blanket Lining | 1.5" Woven Cloth | **BRN** (Brown), **BLK** (Black) | $180 – $380 |
+| **`J97`** | Late 1990s – 2010s | 12-oz Sandstone Duck + Blanket | 1.25" Leatherette | **MOS** (Moss), **PTL** (Petrol), **CHT** (Chestnut) | $280 – $650+ |
+| **`JR106` / `J03`** | 1990s – 2000s | 12-oz Firm Duck + Thermal Hooded | 1.5" Woven Cloth | **BLK** (Black), **BRN** (Brown) | $140 – $280 |
 
 ## 1. How to Read the 4-Digit Date Code on 1990s Tags
 
@@ -33,13 +45,13 @@ In **1998**, Carhartt overhauled its old alphanumeric catalog codes into the sim
   - **`J01`** = Firm Duck Detroit Jacket (stiff 12-oz cotton canvas that develops sharp honeycomb creases on the sleeves).
   - **`J97`** = Sandstone Duck Detroit Jacket (factory-washed, softer 12-oz micro-sanded duck with a leatherette chest patch, introduced in the late 1990s and famed for sun-faded colorways like **MOS** Moss Green, **PTL** Petrol, and **CHT** Chestnut).
 
-## 3. Chest Patch Size and Material Clues
+## 3. Chest Patch Size, Union Stamps, and Counterfeit Red Flags
 
-Examining the square Carhartt "C" logo on the left chest pocket gives an immediate era check even before inspecting the inside label:
+Because `J97` Detroit jackets regularly sell for over \$400, counterfeit versions have flooded online marketplaces. Check these three details before bidding:
 
-- **1.5-Inch Woven Cloth Patch:** Standard on firm duck models (`6BLJ`, `J01`, `J03`, `J140`) throughout the 1990s.
-- **1.25-Inch Leatherette Patch:** Introduced on **Sandstone Duck** models (like the `J97` and `J130`) in the late 1990s. Genuine 1990s and early-2000s leatherette patches develop natural edge cracking and dark patina, whereas modern fakes often look overly glossy or plastic.
-- **Crafted With Pride in U.S.A. / UFCW Union Stamp:** Look for the red, white, and blue *Crafted With Pride in U.S.A.* emblem or the **UFCW** (United Food and Commercial Workers) union bug on the care tag—a hallmark of 1990s American-made Carhartt outerwear.
+- **1.5-Inch Woven Cloth vs. 1.25-Inch Leatherette:** Firm duck models (`6BLJ`, `J01`, `J03`) use a 1.5-inch woven cloth patch, while Sandstone Duck models (`J97`, `J130`) use a 1.25-inch faux-leather patch. Genuine vintage leatherette patches develop natural edge cracking and dark patina; counterfeit patches often look overly glossy, bright orange, or rubbery.
+- **Crafted With Pride in U.S.A. / UFCW Union Stamp:** Look for the red, white, and blue *Crafted With Pride in U.S.A.* emblem or the **UFCW** (United Food and Commercial Workers) union bug on the care tag.
+- **Fake Tag Spelling & Font Errors:** Counterfeit `J97` tags frequently feature misaligned fonts, incorrect fabric percentages (authentic 1990s Detroit shells are **100% Cotton** with an acrylic/polyester blanket lining), or brand-new, crisp white tags paired with artificially faded canvas.
 
 {{ad}}
 
