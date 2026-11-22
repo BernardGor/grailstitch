@@ -18,7 +18,8 @@ Until the early-to-mid 1990s, most American t-shirt blanks were finished on sing
 - **True Single Stitch:** You will see a single, straight row of stitching along the outside edge of the sleeve cuff and bottom hem, backed by a neat overlock loop on the inside.
 - **Double Stitch:** Two parallel rows of stitching on the exterior indicate a mid-1990s or modern blank. While a few late-80s European blanks used double stitching, nearly all authentic 1980s US tour shirts are single-stitched at both the sleeves and bottom hem.
 
-{{product Vintage 1980s Single-Stitch Concert T-Shirts | Original 1980s tour and band tees on vintage blanks. Always ask sellers for close-up photos of the neck tag and sleeve hem stitching. | vintage 80s single stitch band t shirt}}
+{{product Vintage 1980s Single-Stitch Concert T-Shirts | Original 1980s tour and band tees on vintage blanks. Always ask sellers for close-up photos of the neck tag and sleeve hem stitching. | vintage 80s single stitch band t shirt | /images/80s-single-stitch-tee.jpg}}
+
 
 ## 2. How to Date 1980s Blank Tags (Screen Stars, Hanes, and Brockum)
 
