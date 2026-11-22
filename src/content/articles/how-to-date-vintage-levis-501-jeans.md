@@ -1,7 +1,7 @@
 ---
 title: "How to Date Vintage 1960s and 1970s Levi’s 501 Jeans: Big E, Selvedge, and Care Tags"
 description: "A collector’s field guide to identifying and dating 1960s and 1970s Levi’s 501 jeans using Red Tabs, selvedge outseams, pocket stitching, and early care tags."
-date: 2026-11-22
+date: 2026-11-21
 decade: 60s-70s
 category: Denim
 author: GrailStitch Editorial
