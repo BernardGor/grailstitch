@@ -51,7 +51,7 @@ Before the early 1970s, Levi’s did not sew fabric care tags inside the jeans; 
 - **Printed Pocket Bags (Late 1960s–Early 1970s):** Look for faded black ink stamping on the interior pocket lining.
 - **Small White Paper/Fabric Care Tag (1971–1984):** Located along the left hip seam inside the jeans. Look for the factory code stamped onto the back of the top waist button (such as **6**, **2**, or **524**) and match it to the numeric code printed on the bottom line of the care tag.
 
-{{product 1970s Vintage Levi’s 501 "66" Selvedge Denim | Look for single-stitch back pockets, faded red-line outseams, and stamped top buttons from the 1971–1979 era. | vintage 70s levis 501 selvedge}}
+{{product 1970s Vintage Levi’s 501 "66" Selvedge Denim | Look for single-stitch back pockets, faded red-line outseams, and stamped top buttons from the 1971–1979 era. | vintage 70s levis 501 selvedge | /images/levis-501-66-selvedge.jpg}}
 
 ## Quick Dating Checklist Before You Buy
 
