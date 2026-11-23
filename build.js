@@ -3,7 +3,7 @@ const fs = require('fs'), path = require('path');
 const { marked } = require('marked');
 
 const SITE = 'https://grailstitch.com';
-const CAMPID = 'YOUR_CAMPAIGN_ID';          // your eBay Partner Network campaign ID
+const CAMPID = '5339256798';          // your eBay Partner Network campaign ID
 const R = p => path.join(__dirname, p), OUT = R('dist');
 const DEC = {
   '60s-70s': ['60s-70s Vintage', 'Guides to vintage clothing and footwear from the sixties and seventies.'],
