@@ -20,14 +20,14 @@
 <body class="font-sans antialiased">
 {{> header}}
 <main id="main" class="max-w-6xl mx-auto px-4 py-8 grid lg:grid-cols-[1fr_300px] gap-12">
-  <article>
+  <article data-pagefind-body>
     <p class="surface p-3 text-sm muted mb-6" role="note"><strong style="color:var(--ink)">Affiliate disclosure:</strong> This article contains affiliate links to eBay. As a participant in the eBay Partner Network, GrailStitch may earn a commission if you click a link and make a purchase, at no extra cost to you.</p>
     <nav aria-label="Breadcrumb" class="text-sm muted mb-4"><a class="underline underline-offset-4" href="/">Home</a> / <a class="underline underline-offset-4" href="/{{decade}}/">{{decadeTitle}}</a> / {{category}}</nav>
     <header>
       <h1 class="font-serif">{{title}}</h1>
       <p class="muted mt-4 text-sm">By {{author}}, published <time datetime="{{date}}">{{dateText}}</time>, {{readTime}} min read</p>
     </header>
-    <img loading="lazy" width="1200" height="675" class="w-full h-auto mt-6" alt="{{imageAlt}}" src="{{image}}">
+    <img data-pagefind-meta="image[src]" loading="lazy" width="1200" height="675" class="w-full h-auto mt-6" alt="{{imageAlt}}" src="{{image}}">
     <!-- AdSense placeholder 728x90: replace this div with your Google ad code -->
     <div class="ad my-8" style="width:728px;height:90px" role="img" aria-label="Advertisement placeholder"></div>
     <div class="prose-gs">
