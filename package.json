@@ -1,7 +1,15 @@
 {
   "name": "grailstitch",
   "private": true,
-  "scripts": { "build": "node build.js", "serve": "npx serve dist" },
-  "dependencies": { "marked": "18.0.10" },
-  "engines": { "node": ">=20" }
+  "scripts": {
+    "build": "node build.js && pagefind --site dist",
+    "serve": "npx serve dist"
+  },
+  "dependencies": {
+    "marked": "18.0.10",
+    "pagefind": "^1.3.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
 }

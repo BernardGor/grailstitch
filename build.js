@@ -3,7 +3,7 @@ const fs = require('fs'), path = require('path');
 const { marked } = require('marked');
 
 const SITE = 'https://grailstitch.com';
-const CAMPID = '5339256798';          // your eBay Partner Network campaign ID
+const CAMPID = 'YOUR_CAMPAIGN_ID';          // your eBay Partner Network campaign ID
 const R = p => path.join(__dirname, p), OUT = R('dist');
 const DEC = {
   '60s-70s': ['60s-70s Vintage', 'Guides to vintage clothing and footwear from the sixties and seventies.'],
@@ -12,7 +12,8 @@ const DEC = {
 };
 const PH = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%23b3a48a'/%3E%3C/svg%3E";
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const RAW = new Set(['content', 'toc', 'cards', 'jsonld']);
+const RAW = new Set(['content', 'toc', 'cards', 'jsonld', 'pagination']);
+const PER_PAGE = 12;                         // articles per listing page
 const abs = u => !u ? '' : /^https?:/.test(u) ? u : SITE + u;
 
 function render(tpl, vars) {
@@ -34,6 +35,14 @@ marked.use({ renderer: { heading({ tokens, depth }) {
   if (depth === 2) toc.push([id, html.replace(/<[^>]+>/g, '')]);
   return `<h${depth} id="${id}">${html}</h${depth}>\n`;
 } } });
+
+// Copy each table's column names into data-label attributes (used by the mobile card layout)
+function labelTables(html) {
+  return html.replace(/<table>[\s\S]*?<\/table>/g, t => {
+    const heads = [...t.matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map(m => m[1].replace(/<[^>]+>/g, '').trim());
+    return t.replace(/<tr>[\s\S]*?<\/tr>/g, row => { let i = 0; return row.replace(/<td([^>]*)>/g, (m, a) => `<td${a} data-label="${heads[i++] || ''}">`); });
+  });
+}
 
 function shortcodes(md, heroImg) {
   const blocks = []; let n = 0;
@@ -61,6 +70,20 @@ function shortcodes(md, heroImg) {
 
 const card = a => `<article class="surface"><a href="${a.path}" class="block"><img loading="lazy" width="800" height="500" class="w-full h-auto" alt="${esc(a.imageAlt)}" src="${a.image || PH}"><div class="p-5"><p class="muted text-sm">${esc(a.label)}</p><h3 class="font-serif text-xl font-bold mt-1">${esc(a.title)}</h3><p class="muted mt-2 text-sm">${esc(a.description)}</p></div></a></article>`;
 const cards = list => list.length ? list.map(card).join('\n') : '<p class="muted">Articles coming soon.</p>';
+const pageUrl = (slug, n) => n === 1 ? `/${slug}/` : `/${slug}/page/${n}/`;
+function pager(slug, cur, total) {
+  if (total < 2) return '';
+  const out = []; let last = 0;
+  if (cur > 1) out.push(`<a href="${pageUrl(slug, cur - 1)}" rel="prev" aria-label="Previous page">← Previous</a>`);
+  for (let i = 1; i <= total; i++) {
+    if (!(i === 1 || i === total || Math.abs(i - cur) <= 1)) continue;
+    if (i - last > 1) out.push('<span class="gap" aria-hidden="true">…</span>');
+    out.push(i === cur ? `<span aria-current="page" aria-label="Page ${i}, current page">${i}</span>` : `<a href="${pageUrl(slug, i)}" aria-label="Page ${i}">${i}</a>`);
+    last = i;
+  }
+  if (cur < total) out.push(`<a href="${pageUrl(slug, cur + 1)}" rel="next" aria-label="Next page">Next →</a>`);
+  return `<nav class="pager" aria-label="Pagination">${out.join('')}</nav>`;
+}
 const write = (p, s) => { fs.mkdirSync(path.dirname(path.join(OUT, p)), { recursive: true }); fs.writeFileSync(path.join(OUT, p), s); };
 
 fs.rmSync(OUT, { recursive: true, force: true });
@@ -74,7 +97,7 @@ const articles = fs.readdirSync(dir).filter(f => f.endsWith('.md')).map(f => {
   const slug = f.replace(/\.md$/, ''), pth = `/articles/${slug}.html`;
   toc = [];
   const sc = shortcodes(body, d.image);
-  let html = marked.parse(sc.md).replace(/<!--SC(\d+)-->/g, (_, i) => sc.blocks[i]);
+  let html = labelTables(marked.parse(sc.md)).replace(/<!--SC(\d+)-->/g, (_, i) => sc.blocks[i]);
   const words = body.split(/\s+/).length, dt = new Date(d.date);
   const a = { ...d, slug, path: pth, url: SITE + pth, image: d.image || PH, ogImage: abs(d.image) || SITE + '/images/og-default.jpg',
     label: `${(DEC[d.decade] || [d.decade])[0]}, ${d.category}`, decadeTitle: (DEC[d.decade] || [d.decade])[0],
@@ -97,14 +120,20 @@ const heroVars = { heroImage: feat.image || PH, heroAlt: feat.imageAlt || '', he
 for (const f of fs.readdirSync(R('src/pages'))) {
   const home = f === 'index.html';
   write(f, render(fs.readFileSync(R('src/pages/' + f), 'utf8'), { cards: cards(articles.slice(0, 6)), ...heroVars }));
-  urls.push([home ? '/' : '/' + f, home ? 1 : 0.3, '2026-11-21']);
+  if (f !== 'search.html') urls.push([home ? '/' : '/' + f, home ? 1 : 0.3, '2026-11-21']);
 }
 // Listing pages
 const lists = { ...Object.fromEntries(Object.entries(DEC).map(([k, v]) => [k, [v[0], v[1], articles.filter(a => a.decade === k)]])),
   guides: ['Guides', 'Every GrailStitch buying guide, from newest to oldest.', articles] };
+const listTpl = fs.readFileSync(R('src/templates/listing.html'), 'utf8');
 for (const [slug, [heading, intro, list]] of Object.entries(lists)) {
-  write(`${slug}/index.html`, render(fs.readFileSync(R('src/templates/listing.html'), 'utf8'), { heading, intro, url: `${SITE}/${slug}/`, cards: cards(list) }));
-  urls.push([`/${slug}/`, 0.6, new Date().toISOString().slice(0, 10)]);
+  const total = Math.max(1, Math.ceil(list.length / PER_PAGE));
+  for (let n = 1; n <= total; n++) {
+    write(n === 1 ? `${slug}/index.html` : `${slug}/page/${n}/index.html`, render(listTpl, {
+      heading: n > 1 ? `${heading}, Page ${n}` : heading, intro, url: SITE + pageUrl(slug, n),
+      cards: cards(list.slice((n - 1) * PER_PAGE, n * PER_PAGE)), pagination: pager(slug, n, total) }));
+    urls.push([pageUrl(slug, n), n === 1 ? 0.6 : 0.3, new Date().toISOString().slice(0, 10)]);
+  }
 }
 articles.forEach(a => urls.push([a.path, 0.8, new Date(a.updated || a.date).toISOString().slice(0, 10)]));
 

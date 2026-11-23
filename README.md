@@ -35,3 +35,8 @@ Then build. The article page, homepage cards, decade/guides pages and sitemap up
 ## Deploy
 - GitHub Pages: Settings > Pages > Source: GitHub Actions (workflow included).
 - Cloudflare Pages: build command `npm run build`, output directory `dist`.
+
+## Pagination and search
+- Listing pages show 12 articles per page (PER_PAGE in build.js): /guides/, /guides/page/2/ ...
+- Site search uses Pagefind. `npm run build` indexes dist/ automatically; the search page is /search.html.
+- Only article pages are indexed (see data-pagefind-body in src/templates/article.html).
