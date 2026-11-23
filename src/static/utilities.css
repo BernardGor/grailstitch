@@ -207,3 +207,27 @@ main tbody tr:hover td {
     font-weight: 600;
   }
 }
+
+/* Pagination */
+.pager{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;align-items:center;margin-top:2.5rem}
+.pager a,.pager span{min-width:2.5rem;height:2.5rem;display:inline-flex;align-items:center;justify-content:center;padding:0 .9rem;border:1px solid var(--line);background:var(--surface);font-weight:600;font-size:.95rem}
+.pager a:hover{border-color:var(--accent)}
+.pager [aria-current="page"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.pager .gap{border:0;background:none;min-width:auto;padding:0 .2rem}
+
+/* Mobile table cards: show the column name above each value */
+@media (max-width: 768px) {
+  article td[data-label]::before,
+  main td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    opacity: .7;
+    margin-bottom: .15rem;
+  }
+  article td:first-child[data-label]::before,
+  main td:first-child[data-label]::before { display: none; }
+}
