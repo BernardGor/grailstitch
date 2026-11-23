@@ -5,6 +5,9 @@
 try{var t=localStorage.getItem('gs-theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');}catch(e){}
 </script>
 <link rel="stylesheet" href="/utilities.css">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
 <style>
 :root{--bg:#f3f2ef;--surface:#fff;--ink:#16181d;--muted:#4b4f58;--line:#d5d2ca;--accent:#8c1c2b;--accent-ink:#fff}
 .dark{--bg:#0f1114;--surface:#181b20;--ink:#ecebe7;--muted:#b4b6bc;--line:#2e323a;--accent:#e59aa3;--accent-ink:#0f1114}
