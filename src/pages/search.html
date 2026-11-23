@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search the Archive | GrailStitch</title>
+<meta name="description" content="Search GrailStitch guides on vintage clothing and footwear.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://grailstitch.com/search.html">
+<meta name="theme-color" content="#f3f2ef">
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+{{> assets}}<style>#search{--pagefind-ui-primary:var(--accent);--pagefind-ui-text:var(--ink);--pagefind-ui-background:var(--surface);--pagefind-ui-border:var(--line);--pagefind-ui-tag:var(--line);--pagefind-ui-font:inherit;--pagefind-ui-border-radius:0}</style>
+</head>
+<body class="font-sans antialiased">
+{{> header}}
+<main id="main" class="mx-auto px-4 py-10" style="max-width:48rem">
+  <h1 class="font-serif">Search the archive</h1>
+  <p class="muted mt-3 mb-6 text-lg">Find guides by brand, decade or detail, such as “Big E”, “Air Max” or “single stitch”.</p>
+  <div id="search"></div>
+</main>
+{{> footer}}
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded',function(){
+  new PagefindUI({element:'#search',showImages:true,autofocus:true,translations:{placeholder:'Search guides'}});
+  var q=new URLSearchParams(location.search).get('q'),i=document.querySelector('#search input');
+  if(q&&i){i.value=q;i.dispatchEvent(new Event('input',{bubbles:true}));}
+});
+</script>
+</body>
+</html>
