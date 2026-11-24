@@ -1,7 +1,7 @@
 ---
 title: "How to Date Vintage 1960s and 1970s Levi’s Type III Trucker Jackets: 557XX, 70505, and Big E Clues"
 description: "A collector’s field guide to dating 1960s and 1970s Levi’s Type III denim jackets using lemon-yellow stitching, button-band construction, Red Tabs, and pocket details."
-date: 2026-11-24
+date: 2026-11-24T22:30:00Z
 decade: 60s-70s
 category: Denim
 author: GrailStitch Editorial
